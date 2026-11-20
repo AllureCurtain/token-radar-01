@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Token Launch Radar — radar-5</title>
+<link rel="stylesheet" href="app.css">
+</head>
+<body>
+<header class="top">
+  <div>
+    <h1>Token Launch Radar <span class="tag">radar-5</span></h1>
+    <p class="sub">Which pre-token protocols would be worth the most if they launched today — fitted from the market, not from names. Snapshot <span id="asof"></span> · <span id="counts"></span></p>
+  </div>
+  <div class="scorebox" id="scorebox"></div>
+</header>
+
+<section class="evidence" id="evidence">
+  <div class="card wide">
+    <h2>Implied value vs locked value</h2>
+    <p class="hint">Dots: protocols whose token trades (actual market cap). Line: the fitted curve at median growth and age. Pre-token protocols sit on the curve by their TVL.</p>
+    <svg id="scatter" viewBox="0 0 640 300" role="img" aria-label="Scatter of implied value against locked value"></svg>
+    <div class="legend"><span class="dot traded"></span> traded: actual mcap <span class="dot pre"></span> pre-token: fitted <span class="line"></span> fitted curve</div>
+  </div>
+  <div class="card">
+    <h2>Every value term, tested held-out</h2>
+    <table id="terms" class="mini"><thead><tr><th>Term</th><th>Coef</th><th>Held-out RMSE</th><th>Kept?</th></tr></thead><tbody></tbody></table>
+    <p class="hint" id="validline"></p>
+  </div>
+  <div class="card">
+    <h2>Best farms by net value per hour</h2>
+    <ol id="topfarms" class="farms"></ol>
+    <p class="hint">Net expected value at a $1,000 stake, divided by hands-on hours, assuming a launch distributes 6% of implied value to farmers.</p>
+  </div>
+</section>
+
+<section class="card method">
+  <h2>How the value was fitted — and how it was tested</h2>
+  <p id="method"></p>
+  <p class="hint" id="method2"></p>
+</section>
+
+<section class="controls">
+  <input id="q" type="search" placeholder="Search name or slug…" aria-label="Search">
+  <select id="status" aria-label="Status"><option value="all">All pre-token</option><option value="watch">Watchlist only (40)</option><option value="worth">Worth it only</option><option value="thin">Thin only</option><option value="skip">Skip only</option></select>
+  <select id="cat" aria-label="Category"><option value="all">All categories</option></select>
+  <select id="sort" aria-label="Sort"><option value="rank">Sort: implied value ↓</option><option value="tvl">Sort: TVL ↓</option><option value="growth">Sort: 7-day growth ↓</option><option value="ev">Sort: farm EV $1k ↓</option></select>
+  <span class="count" id="rowcount"></span>
+</section>
+
+<main id="boardwrap">
+  <table id="board"><thead><tr><th>#</th><th>Protocol</th><th>Category</th><th>Chains</th><th>TVL</th><th>7d</th><th>Age</th><th>Implied value</th><th>Rank range</th><th>Farm verdict</th><th>Why it ranks here</th></tr></thead><tbody></tbody></table>
+</main>
+
+<section id="detail" class="card detail" hidden></section>
+
+<footer><p>Implied value is this radar's own claim from the snapshot's figures and the fitted model; it is not a prediction that a token will launch, or when. Farm numbers assume a 6% farmer pool — see the method note. No network is used; all data is from the snapshot.</p></footer>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
