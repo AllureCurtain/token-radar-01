@@ -1,8 +1,8 @@
 # Token Launch Radar — radar-5
 
-[![make.fun](https://make.fun/badge/token-radar-01/AllureCurtain/token-radar-01)](https://make.fun/c/token-radar-01)
-[![make.fun entry](https://make.fun/badge/token-radar-01/AllureCurtain/token-radar-01/entry)](https://make.fun/c/token-radar-01)
-[![make.fun rank](https://make.fun/badge/token-radar-01/AllureCurtain/token-radar-01/rank)](https://make.fun/c/token-radar-01)
+[![make.fun · token-radar-01](https://make.fun/badge/token-radar-01.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![rank](https://make.fun/badge/token-radar-01/AllureCurtain/token-radar-01/rank.svg)](https://make.fun/bounty/token-radar-01/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
+[![reward](https://make.fun/badge/token-radar-01/AllureCurtain/token-radar-01/reward.svg)](https://make.fun/bounty/token-radar-01?utm_source=github&utm_medium=readme&utm_campaign=token-radar-01)
 
 Which pre-token protocols would be worth the most if they launched today — fitted from the market, not from names.
 
